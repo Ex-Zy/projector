@@ -1,7 +1,8 @@
 const userNames = ['Петро', 'Емма', 'Юстин', 'Ілля', 'Марта', 'Яна', 'Василь', 'Антон', 'Олена'];
 
-const filteredNames = userNames.filter(n => {
-  return ['е', 'ю', 'і', 'я', 'а', 'о'].includes(n[0].toLowerCase())
+const filteredNames = userNames.filter(name => {
+  const letter = name[0].toLowerCase();
+  return ['е', 'ю', 'і', 'я', 'а', 'о'].includes(letter)
 });
 
 const filteredNamesWithIf = userNames.filter(n => {
@@ -20,11 +21,5 @@ const filteredNamesWithIf = userNames.filter(n => {
   return false;
 });
 
-const filteredWithMap = userNames.filter(n => {
-  const lettersMap = {'е': 1, 'ю': 1, 'і': 1, 'я': 1, 'а': 1, 'о': 1};
-  return lettersMap[n[0].toLowerCase()];
-});
-
 console.log(filteredNames); // ['Емма', 'Юстин', 'Ілля', 'Яна', 'Антон', 'Олена']
 console.log(filteredNamesWithIf); // ['Емма', 'Юстин', 'Ілля', 'Яна', 'Антон', 'Олена']
-console.log(filteredWithMap); // ['Емма', 'Юстин', 'Ілля', 'Яна', 'Антон', 'Олена']
