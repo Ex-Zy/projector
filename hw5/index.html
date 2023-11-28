@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: #fff;
+        }
+
+        body.dark-theme {
+            background: #000;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn {
+            padding: 10px 30px;
+            border-radius: 10px;
+            background: aquamarine;
+            border: 3px solid fuchsia;
+            cursor: pointer;
+        }
+
+        .description {
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="btn" id="toggle-btn">Turn off</button>
+        <div class="description"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
