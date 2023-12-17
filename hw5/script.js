@@ -14,8 +14,8 @@ toggleBtn.addEventListener('click', () => {
   isEnableDarkMode = !isEnableDarkMode;
 });
 
-// load last saved mode from localStorage
-loadDarkMode();
+// get last saved mode(if was saved) from localStorage
+setDarkMode();
 
 function turnOn() {
   toggleBtn.innerHTML = 'Turn on';
@@ -31,13 +31,17 @@ function turnOff() {
   localStorage.setItem('dark-mode', 'false');
 }
 
-function loadDarkMode() {
-  if(localStorage.getItem('dark-mode') === 'true') {
-    turnOn();
-    isEnableDarkMode = true;
-  } else {
-    turnOff();
-    isEnableDarkMode = false;
+function setDarkMode() {
+  if(localStorage.getItem('dark-mode')) {
+
+    if(localStorage.getItem('dark-mode') === 'true') {
+      turnOn();
+      isEnableDarkMode = true;
+    } else {
+      turnOff();
+      isEnableDarkMode = false;
+    }
+
   }
 }
 
